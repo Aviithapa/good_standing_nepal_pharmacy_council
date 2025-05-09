@@ -167,6 +167,13 @@
                                                             Generate</span>
                                                     </a>
                                                 @endif
+
+                                                <a class="download" href="{{ url('download-images/' . $data->id) }}"
+                                                    data-status="download" style="cursor: pointer;">
+                                                    <span class="badge bg-pink-subtle text-pink"
+                                                        style="font-size: 18px; text-transform: capitalize;">Download</span>
+                                                </a>
+                                            @else
                                                 <a class="download"
                                                     href="{{ url('download-images-without-pdf/' . $data->id) }}"
                                                     data-status="download" style="cursor: pointer;">
@@ -174,12 +181,6 @@
                                                         style="font-size: 18px; text-transform: capitalize;">Download
                                                         without approve</span>
                                                 </a>
-                                                <a class="download" href="{{ url('download-images/' . $data->id) }}"
-                                                    data-status="download" style="cursor: pointer;">
-                                                    <span class="badge bg-pink-subtle text-pink"
-                                                        style="font-size: 18px; text-transform: capitalize;">Download</span>
-                                                </a>
-                                            @else
                                                 <a target="_blank"
                                                     href="{{ route('noc-main.show', ['noc_main' => $data->id]) }}">
                                                     <span class="badge bg-purple-subtle  text-purple"
